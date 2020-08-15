@@ -20,6 +20,7 @@ class SocialLogin extends Component {
         API.get("/loginSubmit?type=" + type)
             .then(res => {
                 const persons = res.data;
+                console.log(persons);
                 this.setState({data:persons});
             })
 
