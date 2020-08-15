@@ -1,4 +1,4 @@
-import SocialLogin from "./SocialLogin";
+import SocialLogin from "./Login/SocialLogin";
 
 const routes = [
     {
