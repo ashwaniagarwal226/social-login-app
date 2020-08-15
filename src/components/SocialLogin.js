@@ -10,8 +10,6 @@ class SocialLogin extends Component {
                 <SocialButton type="twitter" />
             </div>);
     };
-
-
 };
 
 export default SocialLogin;
