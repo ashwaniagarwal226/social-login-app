@@ -5,15 +5,14 @@ class SocialLogin extends Component {
     render() {
 
         return (
-            <div className="container">
-                <div class="row">
-                    <div class="col">
-                        <SocialButton type="facebook" />
-                        <SocialButton type="twitter" />
-                        <SocialButton type="github" />
-                    </div>
+            <div class="row">
+                <div class="col">
+                    <SocialButton type="facebook" />
+                    <SocialButton type="twitter" />
+                    <SocialButton type="github" />
                 </div>
-            </div>);
+            </div>
+        );
     };
 };
 
