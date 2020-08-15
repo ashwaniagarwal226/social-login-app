@@ -8,6 +8,7 @@ class SocialLogin extends Component {
             <div>
                 <SocialButton type="facebook" />
                 <SocialButton type="twitter" />
+                <SocialButton type="github" />
             </div>);
     };
 };
