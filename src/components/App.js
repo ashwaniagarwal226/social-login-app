@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Urls from "./Urls";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-
-
 class App extends Component {
 
     render() {

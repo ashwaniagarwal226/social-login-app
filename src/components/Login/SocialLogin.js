@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SocialButton from '../common/buttons/SocialButton';
 import '../../App.css';
-import API from '../../utils/api';
+import LoginApi from './Apis/LoginApi';
 
 class SocialLogin extends Component {
 
@@ -13,16 +13,16 @@ class SocialLogin extends Component {
 
         }
         this.submitLogin = this.submitLogin.bind(this);
+        this.LoginApi = new LoginApi();
     }
 
     submitLogin = (type) => {
+        this.LoginApi.loginSocialSumbit(type).then(res => {
+            return res.data;
+        }).catch(error => {
+            console.error(error);
+        });
 
-        API.get("/loginSubmit?type=" + type)
-            .then(res => {
-                const persons = res.data;
-                console.log(persons);
-                this.setState({data:persons});
-            })
 
     }
 
