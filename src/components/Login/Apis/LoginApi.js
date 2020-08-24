@@ -1,11 +1,11 @@
-import API from '../../../utils/api';
+import API from '../../../utils/Api';
 
-class LoginApi {
+export default class LoginApi {
 
+    constructor() {
+        this.loginApi = API.createAPI();
+    }
     loginSocialSumbit(type) {
-        return API.get("/loginSubmit?type=" + type)
+        return this.loginApi.get("/loginSubmit?type=" + type);
     }
 };
-
-
-export default LoginApi;
