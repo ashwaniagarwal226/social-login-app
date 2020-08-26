@@ -6,6 +6,9 @@ export default class LoginApi {
         this.loginApi = API.createAPI();
     }
     loginSocialSumbit(type) {
-        return this.loginApi.get("/loginSubmit?type=" + type);
+        if(type === "facebook"){
+            return this.loginApi.post("/signin/facebook",{scope:"public_profile"});
+        }
+        
     }
 };
