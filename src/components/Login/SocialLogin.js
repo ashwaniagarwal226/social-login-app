@@ -17,13 +17,7 @@ class SocialLogin extends Component {
     }
 
     submitLogin = (type) => {
-        this.LoginApi.loginSocialSumbit(type).then(res => {
-            return res.data;
-        }).catch(error => {
-            console.error(error);
-        });
-
-
+        document.getElementById("form" + type).submit();
     }
 
     render() {
